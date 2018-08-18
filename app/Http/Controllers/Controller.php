@@ -19,7 +19,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
  *     @SWG\Info(
  *         version="1.0",
  *         title="Hacker News Laravel 5 API",
-*          description="Documentação criada usando o Swagger.",
+ *         description="Documentação criada usando o Swagger.",
  *         @SWG\Contact(name="Saulo Gomes", url="https://github.com/saulobr88")
  *     ),
  *     @SWG\Definition(

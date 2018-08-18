@@ -1,3 +1,43 @@
+# Hacker News With Laravel 5.5
+
+Trabalho realizado para a FluxoTI como requisito para a posição de Programador PHP Full Stack. Esse projeto é o Backend do sistema, uma aplicação usando o framework Laravel que consulte a API do <a href="https://github.com/HackerNews/API" target="_blank">HackerNews</a>.
+
+A aplicação implementa a consulta dos recursos: Item, User, Stories [Top, New, Best].
+
+## Como instalar
+1 - O primeiro passo é confirmar se o PHP 7.0 ou maior, o cliente git e o <a href="https://getcomposer.org/" target="_blank">composer</a> estão instalados e funcionando no computador.
+
+2 - Clonar este repositório:
+
+\$ git clone https://github.com/saulobr88/hnl5.git
+
+3 - Instalar as dependencias usando o Composer (tenha certeza de que o composer está instalado e que está no PATH do sistema operacional), no exemplo a pasta com o código fonte é hnl5:
+
+\$ cd hnl5
+
+\$ composer install
+
+O composer fará o download e instalação dos pacotes do projeto, que estão indicados no arquivo composer.json
+
+Se tudo der certo, será criada a pasta "vendor" dentro da pasta do projeto.
+
+4 - Criar o arquivo .env e criar a chave para o Laravel:
+
+\$ cp .env.example .env
+
+\$ php artisan key:generate
+
+## Como executar
+Se tudo funcionou na fase de instalação agora basta executar o comando:
+
+\$ php artisan serve
+
+Para subir um mini servidor HTTP utilizando o artisan do Laravel, utilizando o servidor imbutido do PHP.
+
+### Mais informação sobre a instalação e execução
+Todos os passos acima estão descritos na <a href="https://laravel.com/docs/5.5/installation" target="_blank">documentação do Laravel</a>, incluindo configurações específicas para sevidores Apache e Nginx, permissões e acesso a pasta public.
+
+<hr>
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
@@ -20,38 +60,6 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
-
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Pulse Storm](http://www.pulsestorm.net/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
