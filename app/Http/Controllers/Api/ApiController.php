@@ -14,6 +14,22 @@ class ApiController extends Controller
      *
      * @return \Illuminate\Http\Response
      * 
+     * @SWG\Get(
+     *     path="/api",
+     *     description="Returns the api version.",
+     *     operationId="api.index",
+     *     produces={"application/json"},
+     *     tags={"api"},
+     *     @SWG\Response(
+     *         response=200,
+     *         description="Success"
+     *     ),
+     *     @SWG\Response(
+     *         response=500,
+     *         description="Server offline",
+     *     )
+     * )
+     * 
      */
     public function index()
     {
@@ -23,8 +39,32 @@ class ApiController extends Controller
 
     /**
      * Returns item details.
-     * @param $id
+     * 
+     * @param  string  $id
      * @return \Illuminate\Http\Response
+     * 
+     * @SWG\Get(
+     *     path="/api/item/{id}",
+     *     description="Returns item details.",
+     *     operationId="api.item",
+     *     produces={"application/json"},
+     *     tags={"item"},
+     *     @SWG\Parameter(
+     *          name="id",
+     *          in="path",
+     *          required=true,
+     *          type="string",
+     *          description="item's unique id",
+     * 	   ),
+     *     @SWG\Response(
+     *         response=200,
+     *         description="Success - found."
+     *     ),
+     *     @SWG\Response(
+     *         response=404,
+     *         description="Not found.",
+     *     )
+     * )
      */
     public function item($id)
     {
@@ -33,9 +73,26 @@ class ApiController extends Controller
     }
 
     /**
-     * Returns new stories.
+     * Returns new stories
      *
      * @return \Illuminate\Http\Response
+     * 
+     * @SWG\Get(
+     *     path="/api/news",
+     *     description="Returns new stories.",
+     *     operationId="api.news",
+     *     produces={"application/json"},
+     *     tags={"stories"},
+     *     @SWG\Response(
+     *         response=200,
+     *         description="Success"
+     *     ),
+     *     @SWG\Response(
+     *         response=500,
+     *         description="Server offline",
+     *     )
+     * )
+     * 
      */
     public function news()
     {
@@ -47,6 +104,23 @@ class ApiController extends Controller
      * Returns top stories.
      * 
      * @return \Illuminate\Http\Response
+     * 
+     * @SWG\Get(
+     *     path="/api/tops",
+     *     description="Returns top stories.",
+     *     operationId="api.tops",
+     *     produces={"application/json"},
+     *     tags={"stories"},
+     *     @SWG\Response(
+     *         response=200,
+     *         description="Success"
+     *     ),
+     *     @SWG\Response(
+     *         response=500,
+     *         description="Server offline",
+     *     )
+     * )
+     * 
      */
     public function tops()
     {
@@ -58,6 +132,23 @@ class ApiController extends Controller
      * Returns best stories
      * 
      * @return \Illuminate\Http\Response
+     * 
+     * @SWG\Get(
+     *     path="/api/bests",
+     *     description="Returns best stories.",
+     *     operationId="api.bests",
+     *     produces={"application/json"},
+     *     tags={"stories"},
+     *     @SWG\Response(
+     *         response=200,
+     *         description="Success"
+     *     ),
+     *     @SWG\Response(
+     *         response=500,
+     *         description="Server offline",
+     *     )
+     * )
+     * 
      */
     public function bests()
     {
@@ -68,9 +159,32 @@ class ApiController extends Controller
     /**
      * Returns user with stories
      * Based on user's unique username. Case-sensitive. Required.
-     * 
-     * @param $id
+     *
+     * @param  string  $id
      * @return \Illuminate\Http\Response
+     * 
+     * @SWG\Get(
+     *     path="/api/user/{id}",
+     *     description="Returns user with stories.",
+     *     operationId="api.users.show",
+     *     produces={"application/json"},
+     *     tags={"users"},
+     *     @SWG\Parameter(
+     *          name="id",
+     *          in="path",
+     *          required=true,
+     *          type="string",
+     *          description="user's unique username. Case-sensitive",
+     * 	   ),
+     *     @SWG\Response(
+     *         response=200,
+     *         description="Success - User found."
+     *     ),
+     *     @SWG\Response(
+     *         response=404,
+     *         description="User not found.",
+     *     )
+     * )
      */
     public function user($id)
     {

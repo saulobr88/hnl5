@@ -84,11 +84,10 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{ route('l5-swagger.api') }}">Documentation</a>
+                    <a href="https://github.com/saulobr88/hnl5" target="_blank">GitHub</a>
+                    <a href="https://laravel.com" target="_blank">About Laravel</a>
+                    <a href="http://www.fluxoti.com/" target="_blank">Fluxo TI</a>
                 </div>
             </div>
         </div>

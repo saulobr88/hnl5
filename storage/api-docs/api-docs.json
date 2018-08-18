@@ -1,0 +1,198 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Hacker News Laravel 5 API",
+        "description": "Documenta\u00e7\u00e3o criada usando o Swagger.",
+        "contact": {
+            "name": "Saulo Gomes",
+            "url": "https://github.com/saulobr88"
+        },
+        "version": "1.0"
+    },
+    "host": "http://hnl5.dev.br/",
+    "basePath": "",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/api": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Returns the api version.",
+                "description": "Returns the api version.",
+                "operationId": "api.index",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "500": {
+                        "description": "Server offline"
+                    }
+                }
+            }
+        },
+        "/api/item/{id}": {
+            "get": {
+                "tags": [
+                    "item"
+                ],
+                "summary": "Returns item details.",
+                "description": "Returns item details.",
+                "operationId": "api.item",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "item's unique id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success - found."
+                    },
+                    "404": {
+                        "description": "Not found."
+                    }
+                }
+            }
+        },
+        "/api/news": {
+            "get": {
+                "tags": [
+                    "stories"
+                ],
+                "summary": "Returns new stories",
+                "description": "Returns new stories.",
+                "operationId": "api.news",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "500": {
+                        "description": "Server offline"
+                    }
+                }
+            }
+        },
+        "/api/tops": {
+            "get": {
+                "tags": [
+                    "stories"
+                ],
+                "summary": "Returns top stories.",
+                "description": "Returns top stories.",
+                "operationId": "api.tops",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "500": {
+                        "description": "Server offline"
+                    }
+                }
+            }
+        },
+        "/api/bests": {
+            "get": {
+                "tags": [
+                    "stories"
+                ],
+                "summary": "Returns best stories",
+                "description": "Returns best stories.",
+                "operationId": "api.bests",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "500": {
+                        "description": "Server offline"
+                    }
+                }
+            }
+        },
+        "/api/user/{id}": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Returns user with stories\nBased on user's unique username. Case-sensitive. Required.",
+                "description": "Returns user with stories.",
+                "operationId": "api.users.show",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "user's unique username. Case-sensitive",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success - User found."
+                    },
+                    "404": {
+                        "description": "User not found."
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Error": {
+            "required": [
+                "code",
+                "message"
+            ],
+            "properties": {
+                "code": {
+                    "description": "Class ApiController",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "message": {
+                    "description": "Class ApiController",
+                    "type": "string"
+                }
+            }
+        },
+        "Timestamps": {
+            "properties": {
+                "created_at": {
+                    "description": "Creation date",
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2017-07-21 00:00:00"
+                },
+                "updated_at": {
+                    "description": "Last updated",
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2017-07-21 00:00:00"
+                }
+            }
+        }
+    }
+}
