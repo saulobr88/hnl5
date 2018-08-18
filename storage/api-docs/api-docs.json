@@ -9,9 +9,10 @@
         },
         "version": "1.0"
     },
-    "host": "http://hnl5.dev.br/",
+    "host": "https://hnl5.herokuapp.com",
     "basePath": "",
     "schemes": [
+        "https",
         "http"
     ],
     "paths": {

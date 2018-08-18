@@ -14,8 +14,8 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
  *
  * @SWG\Swagger(
  *     basePath="",
- *     host="http://hnl5.dev.br/",
- *     schemes={"http"},
+ *     host="https://hnl5.herokuapp.com",
+ *     schemes={"https","http"},
  *     @SWG\Info(
  *         version="1.0",
  *         title="Hacker News Laravel 5 API",
