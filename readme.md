@@ -37,6 +37,33 @@ Para subir um mini servidor HTTP utilizando o artisan do Laravel, utilizando o s
 ### Mais informação sobre a instalação e execução
 Todos os passos acima estão descritos na <a href="https://laravel.com/docs/5.5/installation" target="_blank">documentação do Laravel</a>, incluindo configurações específicas para sevidores Apache e Nginx, permissões e acesso a pasta public.
 
+### Testes com o PHPUnit
+O Laravel traz o PHPUnit a alguns métodos para realização de testes automatizados, com o Test Driven Development (TDD) em mente, criei alguns pequenos testes HTTP para certificar de que a aplicação está funcionando corretamente.
+
+1 - Para executar os testes:
+
+\$ vendor/bin/phpunit
+
+2 - Para listar os testes disponíveis:
+
+\$ vendor/bin/phpunit --list-tests
+
+3 - Para executar o teste com a saída mais detalhada:
+
+\$ vendor/bin/phpunit --debug
+
+Ou
+
+\$ vendor/bin/phpunit --testdox
+
+4 - Para executar somente um método de teste:
+
+\$ vendor/bin/phpunit --filter test_nome_do_method
+
+Por exemplo:
+
+\$ vendor/bin/phpunit --filter testApiRoot
+
 <hr>
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
