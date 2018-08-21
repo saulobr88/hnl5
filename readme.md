@@ -2,9 +2,9 @@
 
 Trabalho realizado para a FluxoTI como requisito para a posição de Programador PHP Full Stack. Esse projeto é o Backend do sistema, uma aplicação usando o framework Laravel que consulte a API do <a href="https://github.com/HackerNews/API" target="_blank">HackerNews</a>.
 
-A aplicação implementa a consulta dos recursos: Item, User, Stories [Top, New, Best].
+A aplicação implementa a consulta dos recursos: Item, User, Stories [Top, New, Best]. Também foi criado uma <a href="https://github.com/saulobr88/hnvue" target="_blank">aplicação cliente</a> usando VueJs.
 
-## Como instalar
+## Como instalar 
 1 - O primeiro passo é confirmar se o PHP 7.0 ou maior, o cliente git e o <a href="https://getcomposer.org/" target="_blank">composer</a> estão instalados e funcionando no computador.
 
 2 - Clonar este repositório:
@@ -61,7 +61,29 @@ Por exemplo:
 
 \$ vendor/bin/phpunit --filter testApiRoot
 
-### Mais informação sobre a instalação e execução
+<hr>
+
+## Usando com o Docker
+existe uma imagem dessa aplicação no DockerHub, a mesma pode ser usada com o seguinte comandos:
+
+1 - O docker irá baixar a imagem caso ela não exista no Docker Host:
+
+\# docker run -d --rm -p 8080:8080 saulobr88/hnl5:latest
+
+## Usando com o Docker Compose
+Para usar com o Docker Compose, basta subir a aplicação usando o arquivo 'docker-compose.yml' do repositório, ele sobe a API e a aplicação cliente:
+
+1 - Iniciar o Swarm caso não já esteja ativado:
+
+\# docker swarm init
+
+2 - Executar o Deploy com o docker-compose, no exemplo usei o nome 'hnlab':
+
+\# docker stack deploy -c docker-compose.yml hnlab
+
+<hr>
+
+### Mais informações sobre a instalação e execução do Laravel
 Todos os passos acima estão descritos na <a href="https://laravel.com/docs/5.5/installation" target="_blank">documentação do Laravel</a>, incluindo configurações específicas para sevidores Apache e Nginx, permissões e acesso a pasta public.
 
 <hr>
