@@ -1,6 +1,6 @@
-# Hacker News With Laravel 5.5
+# Hacker News com Laravel 5.5
 
-Trabalho realizado para a FluxoTI como requisito para a posição de Programador PHP Full Stack. Esse projeto é o Backend do sistema, uma aplicação usando o framework Laravel que consulte a API do <a href="https://github.com/HackerNews/API" target="_blank">HackerNews</a>.
+Trabalho realizado para a <a href="http://www.fluxoti.com/" target="_blank">FluxoTI</a> como requisito para a posição de Programador PHP Full Stack. Este projeto é o Backend do sistema, uma aplicação usando o framework Laravel que consulte a API do <a href="https://github.com/HackerNews/API" target="_blank">HackerNews</a>.
 
 A aplicação implementa a consulta dos recursos: Item, User, Stories [Top, New, Best]. Também foi criado uma <a href="https://github.com/saulobr88/hnvue" target="_blank">aplicação cliente</a> usando VueJs.
 
