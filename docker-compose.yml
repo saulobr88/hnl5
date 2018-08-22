@@ -2,25 +2,6 @@
 version: '3.1'
 
 services:
-  # MySQL (5.7)
-  authsoa-mysql:
-    image: mysql:5.7.10
-    #container_name: authsoa-mysql
-    command: --default-authentication-plugin=mysql_native_password
-    restart: always
-    volumes:
-      #- authsoa-mysql-data:/var/lib/mysql
-      - /database:/var/lib/mysql
-    ports:
-      - "3306:3306"
-    #networks:
-      #- soanet
-    environment:
-      # Apenas seta as variaveis se o volume estiver vazio
-      MYSQL_ROOT_PASSWORD: 'secret'
-      MYSQL_DATABASE: 'homestead'
-      MYSQL_USER: 'homestead'
-      MYSQL_PASSWORD: 'secret'
   # PHP (with Caddy)
   hnl5:
     image: saulobr88/hnl5:latest
@@ -28,10 +9,13 @@ services:
       - "8080:8080" # real:container
     #networks:
       #- hnlnet
+  # NodeJs 8
   hnvue:
     image: saulobr88/hnvue:latest
+    depends_on:
+      - hnl5
     ports:
-      - "8080:8081" # real:container
+      - "8081:8080" # real:container
     #networks:
       #- hnlnet
 #networks:
