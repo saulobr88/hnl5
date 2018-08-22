@@ -64,7 +64,7 @@ Por exemplo:
 <hr>
 
 ## Usando com o Docker
-existe uma imagem dessa aplicação no DockerHub, a mesma pode ser usada com o seguinte comandos:
+Existe uma <a href="https://hub.docker.com/r/saulobr88/hnl5/" taget="_blank">imagem</a> desta aplicação no DockerHub, a mesma pode ser usada com o seguinte comando:
 
 1 - O docker irá baixar a imagem caso ela não exista no Docker Host:
 
@@ -80,6 +80,11 @@ Para usar com o Docker Compose, basta subir a aplicação usando o arquivo 'dock
 2 - Executar o Deploy com o docker-compose, no exemplo usei o nome 'hnlab':
 
 \# docker stack deploy -c docker-compose.yml hnlab
+
+3 - O mapeamento das portas no Docker Host está da seguinte forma:
+
+- Porta 8080 serve a Aplicação Laravel (Backend)
+- Porta 8081 serve a aplicação VueJs (Frontend)
 
 <hr>
 
